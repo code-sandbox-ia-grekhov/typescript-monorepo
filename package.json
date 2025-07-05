@@ -1,0 +1,7 @@
+{
+  "name": "typescript-monorepo",
+  "version": "1.0.0",
+  "repository": "https://github.com/code-sandbox-ia-grekhov/typescript-monorepo.git",
+  "author": "i.a.grekhov <iagrekhov.fronted@gmail.com>",
+  "license": "MIT"
+}
