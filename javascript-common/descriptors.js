@@ -40,6 +40,13 @@ Object.defineProperty(objectWithHiddenProperties, "hiddenField", {
   value: "hidden",
 });
 
+// Один из способов получить все ключи, включая скрытые через enumerable false
+const allKeys = Reflect.ownKeys(objectWithHiddenProperties);
+const descriptors = Object.getOwnPropertyDescriptors(
+  objectWithHiddenProperties
+);
+
 console.log(JSON.stringify(objectWithHiddenProperties, null, 2));
 console.log(objectWithHiddenProperties.hiddenField);
-console.log(Reflect.ownKeys(objectWithHiddenProperties));
+console.log(allKeys);
+console.log(descriptors);
