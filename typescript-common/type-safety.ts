@@ -1,5 +1,3 @@
-// is, keyof, typeof
-
 type OrderObject = { order: number };
 
 const testWithoutTypePredicateArray: Array<string | number | OrderObject> = [
@@ -33,3 +31,5 @@ const testWithTypePredicateArray: Array<NumberObject | CountObject> = [
 const withTypePredicateArray = testWithTypePredicateArray
   .filter((t): t is CountObject => t.type === "CountObject")
   .map((t) => t.count);
+
+//==================================================================================
